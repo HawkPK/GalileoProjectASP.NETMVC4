@@ -18,6 +18,11 @@ namespace Galileo.Web.Infrastructure
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
 
+        public void Save()
+        {
+            SaveChanges();
+        }
+
         IQueryable<Employee> IDepartmentSource.Employees
         {
             get
@@ -33,5 +38,7 @@ namespace Galileo.Web.Infrastructure
                 return Departments;
             }
         }
+
+        public System.Data.Entity.DbSet<Galileo.Web.Models.CreateEmployeeViewModel> CreateEmployeeViewModels { get; set; }
     }
 }

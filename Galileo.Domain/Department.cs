@@ -8,9 +8,9 @@ namespace Galileo.Domain
 {
     public class Department
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public virtual int ID { get; set; }
+        public virtual string Name { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
 
     }
 }
